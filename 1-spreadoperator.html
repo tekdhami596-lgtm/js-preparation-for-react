@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>spread operator for practice</title>
+</head>
+<body>
+
+  <script>
+    /* spread opearator is used to 
+    -copy arrays
+    -merge arrays
+    -copy ibject
+    -merge object
+    - update data immutable */
+
+  //  copy array
+    let nums = [1,2,3,4,5]
+    let copyNum = [...nums]
+
+    console.log(nums)
+    console.log(copyNum)
+
+// add new value to array
+    let students = ['ram', 'sita', 'gita']
+    let newStudents = [...students, 'Hari']
+    console.log(students)
+    console.log(newStudents)
+
+    // merge two array
+    let a=[1,2]
+    let b=[3,4]
+    let result =[...a,...b]
+    console.log(result)
+
+    // copy object
+    let person = {name:'Hari', age:20}
+    let copyPerson = {...person}
+    console.log(person)
+    console.log(copyPerson)
+
+    // add new property
+    let user = {name:'sita'}
+    let newUser = {...user,age:22}
+    console.log(user)
+    console.log(newUser)
+
+    // update existing proprety
+    let student ={name:'Ramesh', gpa:2.9}
+    let newStudent ={...student, gpa:4}
+    console.log(student)
+    console.log(newStudent)
+
+
+    let Person = {
+  name: "Kiran",
+  contact: {
+    ncell: 9800000000
+  }
+};
+
+Person = {
+  ...Person,
+  contact:{
+    ...Person.contact,
+    ntc:9811111
+  }
+}
+
+console.log(Person)
+
+// add ntc: 9811111111 using spread
+
+let users = { name: "Sita", age: 18 };
+users = {...users, age:22}
+console.log(users)
+// update age to 22 using spread
+
+
+  </script>
+</body>
+</html>

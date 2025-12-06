@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest operator for practice</title>
+  </head>
+  <body>
+    <script>
+      // Function parameter(Rest parameter)
+
+      function sum(...numbers) {
+        let total = 0;
+        numbers.forEach((value) => {
+          total += value;
+        });
+        return total;
+      }
+
+      console.log(sum(100, 200));
+
+      // separate first value and rest (array destructuring)
+
+      let nums = [100, 200, 300, 400];
+
+      const [first, ...rest] = [100, 200, 300, 400];
+      console.log(first);
+      console.log(rest);
+
+      // object destructing
+      // Separate name and put rest into another object
+
+      let student = {
+        name: "Sita",
+        age: 20,
+        grade: "A",
+        city: "Pokhara",
+      };
+
+      const {name, ...restOfObject}= {
+        name: "Sita",
+        age: 20,
+        grade: "A",
+        city: "Pokhara",
+      };
+
+      console.log(name)
+      console.log(restOfObject);
+
+    // multiply unknown numbers
+
+    function multiplyAll(...numbers){
+      let total =1;
+      numbers.forEach((value)=>{
+        total *=value;
+      })
+      return total;
+      
+    }
+
+    console.log(multiplyAll(2,3));
+    console.log(multiplyAll(2,3,4,5,8));
+    </script>
+  </body>
+</html>
