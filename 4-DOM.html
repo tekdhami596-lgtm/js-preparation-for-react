@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 id="title">Hello</h1>
+    <button onclick="change()">Change</button>
+
+    <p id="para1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, non
+      molestias. Consequuntur maiores quam laudantium repellendus mollitia
+      officiis delectus culpa itaque. Nam deleniti voluptate omnis magnam illo
+      assumenda nostrum repellat! Incidunt, cumque! Ipsum ullam, fuga deleniti
+      dicta omnis cupiditate ea itaque quaerat magnam nesciunt! Ea cumque,
+      temporibus numquam, aliquam amet nulla reprehenderit sit non possimus
+      maxime labore voluptate, excepturi eum. Deleniti doloribus eum architecto
+      eos modi ipsa necessitatibus repellat. Reiciendis itaque voluptatum quod
+      expedita? Tempora est, officiis eaque rem ipsam beatae, laboriosam,
+      reprehenderit sapiente quidem totam repellendus velit voluptatum dolor.
+      Sint praesentium neque eius, libero voluptas unde sed eligendi provident
+      laudantium vitae fugiat atque amet, ea ipsa laboriosam debitis. Tenetur,
+      recusandae dicta quaerat temporibus aut cumque quam. Rerum, velit magni.
+      Perspiciatis sunt ducimus accusantium excepturi a itaque eos numquam hic
+      non explicabo recusandae temporibus consequatur harum fugit aliquam quam
+      suscipit fugiat doloremque alias deserunt repellendus magni, sed porro.
+      Velit, vero.
+    </p>
+    
+
+    <div id="div1">Hide this</div>
+    <button onclick="hide()">Hide Div</button>
+    <button onclick="show()">Show Div</button>
+
+    <h1>My List</h1>
+    <ul id="mylist">
+      <li>Item1</li>
+      <li>item2</li>
+      <li>Item3</li>
+    </ul>
+    <button id="addItemButton">Add new  item</button>
+    <button id="removeItemButton">Remove Item</button>
+    
+    
+    <script>
+
+     const mylist=  document.getElementById('mylist')
+
+     const addItemButton = document.getElementById('addItemButton');
+
+     const removeItemButton = document.getElementById('removeItemButton');
+
+     addItemButton.addEventListener('click', ()=>{
+      const newItem = document.createElement('li')
+      newItem.textContent = 'New Item';
+      mylist.appendChild(newItem);
+     })
+
+     removeItemButton.addEventListener('click', ()=>{
+      const items = mylist.getElementsByTagName('li')
+      if(items.length>0){
+        mylist.removeChild(items[items.length-1]);
+      }
+     })
+
+
+
+
+
+
+      function change() {
+        document.getElementById("title").innerHTML = "Welcome to DOM";
+        document.getElementById("para1").style.color = "red";
+      }
+
+      function hide(){
+        document.getElementById("div1").style.display = 'none';
+      }
+
+      function show(){
+        document.getElementById('div1').style.display = 'block';
+      }
+    </script>
+  </body>
+</html>
