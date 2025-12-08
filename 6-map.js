@@ -1,3 +1,5 @@
+// Map creates new array from existing one, applying function to each one of the elements of the first array. It does not change the original array
+
 // Task: Create a new array with all values multiplied by 2.
 const nums = [2, 4, 6, 8];
 const updatedNums = nums.map((num) => {
