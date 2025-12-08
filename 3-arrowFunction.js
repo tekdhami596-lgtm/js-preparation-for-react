@@ -81,4 +81,4 @@ setTimeout(function() {
  */
 setTimeout(()=> {
   console.log("Time's up!");
-}, 1000);
+}, 1000)
