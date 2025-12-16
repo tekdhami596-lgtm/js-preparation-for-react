@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding Event Listeners</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body style="font-family: cursive;">
+    <h1>Adding Event Listeners</h1>
+    <div class="container">
+      <div ondblclick="card1()" class="card">1</div>
+    </div>
+
+
+    <script>
+     const h1 = document.querySelector('h1');
+     h1.addEventListener('click',sayHi)
+
+     function sayHi(){
+      console.log('Hiii')
+     }
+    //  h1.onclick = sayHi();
+    </script>
+  </body>
+</html>
